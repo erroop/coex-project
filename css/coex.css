@@ -66,7 +66,7 @@ header{
     width: 14px;
     height: 14px;
     background-size: 14px;
-    background-image: url(/img/ico_head_blank_w.svg);
+    background-image: url(../img/ico_head_blank_w.svg);
     content: "";
 }
 
@@ -92,7 +92,7 @@ header{
     width:29px;
     height: 27px;
     background-size: 29px 27px;
-    background-image: url(/img/ico_search.svg);
+    background-image: url(../img/ico_search.svg);
 }
 
 .HeaderSearch-close{
@@ -103,7 +103,7 @@ header{
     width:29px;
     height: 27px;
     background-size: 29px 27px;
-    background-image: url(/img/ico_search_close.svg);
+    background-image: url(../img/ico_search_close.svg);
 }
 
 .HeaderSearchBar{
@@ -125,7 +125,7 @@ header{
     width:16px;
     height: 16px;
     background-size: 16px 16px;
-    background-image: url(/img/ico_search.svg);
+    background-image: url(../img/ico_search.svg);
     content: "";
 }
 
@@ -166,7 +166,7 @@ header{
     width:17px;
     height:13px;
     background-size: 17px 13px;
-    background-image: url(/img/ico_search_arrow.svg);
+    background-image: url(../img/ico_search_arrow.svg);
     content: "";
 }
 
@@ -246,7 +246,7 @@ main{
     width: 205px;
     height: 205px;
     background-size: 205px;
-    background-image: url(/img/ico_hero_arrow.svg);
+    background-image: url(../img/ico_hero_arrow.svg);
 }
 
 /* HeroSlide-thumb =====================*/
@@ -306,7 +306,7 @@ main{
     width:180px;
     height:50px;
     background-size: 130px 50px;
-    background-image: url(/img/bg-barcode.png);
+    background-image: url(../img/bg-barcode.png);
     content: "";
 }
 
@@ -338,7 +338,7 @@ main{
     width:115px;
     height: 95px;
     background-size: 115px 95px;
-    background-image: url(/img/ico_map.png);
+    background-image: url(../img/ico_map.png);
     content: "";
 }
 
@@ -411,7 +411,7 @@ main{
     width:71px;
     height:85px;
     background-size: 71px 85px;
-    background-image: url(/img/ico_guide_1.svg);
+    background-image: url(../img/ico_guide_1.svg);
     content: "";
 }
 
@@ -422,7 +422,7 @@ main{
     width:65px;
     height:89px;
     background-size: 65px 89px;
-    background-image: url(/img/ico_guide_2.svg);
+    background-image: url(../img/ico_guide_2.svg);
     content: "";
 }
 
@@ -433,6 +433,6 @@ main{
     width:93px;
     height:87px;
     background-size: 93px 87px;
-    background-image: url(/img/ico_guide_3.svg);
+    background-image: url(../img/ico_guide_3.svg);
     content: "";
 }
