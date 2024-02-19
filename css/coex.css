@@ -42,7 +42,7 @@ header{
     font-weight: bold;
 }
 
-.menu-wrap li a:hover{
+.menu-wrap li:nth-child(-n+3) a:hover{
     border-bottom: 1px solid #fff;
 }
 
