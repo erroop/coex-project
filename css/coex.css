@@ -1,0 +1,438 @@
+/*======= Header =======*/
+header{
+    background-color: #000;
+}
+
+/* Header Info ================*/
+.HeaderInfo{
+    position: relative;
+    max-width:90%;
+    min-height: 66px;
+    margin: auto;
+    background-color: #000;
+}
+
+/* Logo =====================*/
+.Logo {
+    position: absolute;
+    top:50%;
+    left:0px;
+    transform: translateY(-50%);
+}
+
+/* Navigation =================*/
+.Navigation{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-wrap{
+    display:inline-flex;
+}
+
+.menu-wrap li{
+    padding:23px 18px;
+}
+
+.menu-wrap li a{
+    font-size: 17px;
+    color:#fff;
+    font-weight: bold;
+}
+
+.menu-wrap li a:hover{
+    border-bottom: 1px solid #fff;
+}
+
+.menu-item-102-sub-menu{
+    display:none;
+}
+
+.menu-item-104 a{
+    position: relative;
+    padding:2px 30px 2px 12px;
+    border-radius: 30px;
+    color:#fff;
+    background-color: #f147ac;
+}
+
+.menu-item-104 a::after{
+    position: absolute;
+    top:50%;
+    right:9px;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background-size: 14px;
+    background-image: url(/img/ico_head_blank_w.svg);
+    content: "";
+}
+
+
+/* Header Search =====================*/
+.HeaderSearch{
+    position: relative;
+    position: absolute;
+    top:50%;
+    right:8%;
+    transform: translateY(-50%);
+}
+
+.HeaderSearch-link{
+    width:29px;
+    height: 27px;
+}
+
+.HeaderSearch-open{
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:29px;
+    height: 27px;
+    background-size: 29px 27px;
+    background-image: url(/img/ico_search.svg);
+}
+
+.HeaderSearch-close{
+    display: none;
+    position: absolute;
+    top:0px;
+    right:0px;
+    width:29px;
+    height: 27px;
+    background-size: 29px 27px;
+    background-image: url(/img/ico_search_close.svg);
+}
+
+.HeaderSearchBar{
+    display:none;
+    position: absolute;
+    top:0px;
+    left:-340px;
+    transform: translateY(-20%);
+    padding:8px 64px 8px 43px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.HeaderSearchBar::before{
+    position: absolute;
+    top:50%;
+    left:5%;
+    transform: translateY(-50%);
+    width:16px;
+    height: 16px;
+    background-size: 16px 16px;
+    background-image: url(/img/ico_search.svg);
+    content: "";
+}
+
+.HeaderSearchBar-input{
+    min-width: 212px;
+    min-height: 23px;
+    border:none;
+    color: #fff;
+    background-color: transparent;
+}
+
+.HeaderSearchBar-input:focus{
+    outline: none;
+}
+
+.HeaderSearchBar-submit{
+    position: relative;
+    position: absolute;
+    top:50%;
+    right:5%;
+    transform: translateY(-50%);
+    width:31px;
+    height: 29px;
+    border:none;
+    border-radius:5px;
+    background-color: #000;
+}
+
+.HeaderSearchBar-submit:hover{
+    background-color: #f147ac;
+}
+
+.HeaderSearchBar-submit::after{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:17px;
+    height:13px;
+    background-size: 17px 13px;
+    background-image: url(/img/ico_search_arrow.svg);
+    content: "";
+}
+
+/* Language =================*/
+.SiteLang{
+    position: absolute;
+    top:50%;
+    right:0px;
+    transform: translateY(-50%);
+}
+
+.lang-wrap{
+    display: inline-flex;
+}
+
+.lang-wrap li{
+    font-size: 17px;
+    font-weight: bold;
+    color:#fff;
+}
+
+.lang-wrap .lang-item-101{
+    margin-right:10px;
+    border-bottom: 1px solid #fff;
+}
+
+/* Main ====================*/
+main{
+    max-width:90%;
+    margin: auto;
+}
+
+.Hero{
+    height: 565px;
+    padding:67px 0px 87px 0px;
+}
+
+.HeroSlide{
+    position: relative;
+    display: flex;
+    height: 100%;
+}
+
+/* HeroSlide-text =====================*/
+.HeroSlide-text{
+    width:67%;
+}
+
+.HeroSlide-subtext{
+    margin-bottom:30px;
+    font-size: 27px;
+    font-weight: bold;
+    color: #f147ac;
+}
+
+.HeroSlideTitleText{
+    font-size: 63px;
+    line-height: 85px;
+}
+
+.HeroSlideTextInfo{
+    position: absolute;
+    bottom:0px;
+}
+
+.HeroSlideTextInfo div{
+    margin-top:3px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 36px;
+}
+
+.HeroSlideArrow{
+    position: absolute;
+    bottom:0%;
+    right:35%;
+    width: 205px;
+    height: 205px;
+    background-size: 205px;
+    background-image: url(/img/ico_hero_arrow.svg);
+}
+
+/* HeroSlide-thumb =====================*/
+.HeroSlide-thumb{
+    position: relative;
+    width:33%;
+    overflow: hidden;
+}
+
+.HeroSlide-thumb-wrap{
+    display:flex;
+    transition: all 1s;
+}
+
+.HeroSlide-thumb-wrap div{
+    flex-shrink: 0;
+    width:100%;
+    overflow: hidden;
+}
+
+.HeroSlide-thumb-wrap img{
+    width:100%;
+}
+
+.HeroSlide-thumb-indicator{
+    position: absolute;
+    bottom:-7%;
+    right:14%;
+}
+
+.HeroSlide-thumb-indicator span{
+    display: inline-block;
+    width: 11px;
+    height:11px;
+    margin:0px 5px;
+    border-radius: 100%;
+    background-color: #e8e8e8;
+}
+
+.HeroSlide-thumb-indicator .focus{
+    background-color: #000;
+}
+
+.HeroSlide-thumb-category{
+    position: absolute;
+    top:56px;
+    right: -140px;
+    transform: rotate(270deg);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.HeroSlide-thumb-category::after{
+    position: absolute;
+    bottom:0px;
+    right:386px;
+    width:180px;
+    height:50px;
+    background-size: 130px 50px;
+    background-image: url(/img/bg-barcode.png);
+    content: "";
+}
+
+/* MainGuide ===============================*/
+
+.site-container{
+    display:flex;
+}
+
+/*MainGuideTitle ============================*/
+.MainGuideTitle{
+    position: relative;
+    width:20%;
+    height:132px;
+    padding:40px 43px;
+    background-color: #000;
+}
+
+.MainGuideInfo{
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+
+.MainGuideInfo::before{
+    position: absolute;
+    bottom:15%;
+    right:8%;
+    width:115px;
+    height: 95px;
+    background-size: 115px 95px;
+    background-image: url(/img/ico_map.png);
+    content: "";
+}
+
+.MainGuideInfo-cate-title-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 3em;
+    color:#fff
+}
+
+.MainGuideInfo-title-text{
+    font-size: 27px;
+    color:#fff;
+}
+
+/* MdGuide ===========================*/
+.MdGuide{
+    display:flex;
+    width:80%;
+    padding:40px 43px;
+    background-color: #f8f8f8;
+}
+
+.MdGuideTitle{
+    width:40%;
+    padding:0px 32px 20px 0px;   
+}
+
+.MdGuideInfo-cate-title-text{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 3em;
+}
+
+.MdGuideInfo-title-text{
+    font-size: 27px;
+    line-height: 1.5em;
+}
+
+.MdGuideList{
+    width:60%;
+    margin-top:50px;
+}
+
+.MdGuideList-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width:100%;
+    height: 100%;
+}
+
+.MdGuideList-list li{
+    position: relative;
+    width:219px;
+    border-bottom: 1px solid black;
+    text-align: end;
+}
+
+.MdGuideList-title{
+    padding-bottom:10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.MdGuideList-item-ico-Parking::before{
+    position: absolute;
+    bottom: 10px;
+    left:0px;
+    width:71px;
+    height:85px;
+    background-size: 71px 85px;
+    background-image: url(/img/ico_guide_1.svg);
+    content: "";
+}
+
+.MdGuideList-item-ico-Directions::before{
+    position: absolute;
+    bottom: 10px;
+    left:0px;
+    width:65px;
+    height:89px;
+    background-size: 65px 89px;
+    background-image: url(/img/ico_guide_2.svg);
+    content: "";
+}
+
+.MdGuideList-item-ico-Amenities::before{
+    position: absolute;
+    bottom: 10px;
+    left:0px;
+    width:93px;
+    height:87px;
+    background-size: 93px 87px;
+    background-image: url(/img/ico_guide_3.svg);
+    content: "";
+}
