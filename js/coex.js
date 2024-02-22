@@ -1,4 +1,14 @@
 $(function(){
+    // guide mouseover =====================================
+    const menu_item_102 = $(".menu-item-102 a");
+    const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
+    menu_item_102.mouseover(function(){
+        menu_item_102_sub_menu.css({display:"flex"})
+    })
+    menu_item_102_sub_menu.mouseleave(function(){
+        menu_item_102_sub_menu.css({display:"none"})
+    })
+
     // HeaderSearchBar click ===============================================
     const HeaderSearch = $(".HeaderSearch-link");
     const HeaderSearchBar = $(".HeaderSearchBar");
@@ -285,4 +295,38 @@ $(function(){
         MainTicket_count = 5;
     })
 
+    // MainNewsList click
+    const list_title = $(".MainNewsListInfo-list .MainNewsListInfo-list-item");
+    const MainnewsList = $(".MainNewesList-list");
+    const list_change = (index, content, second_content, third_content , first_index, second_index) => {
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-day").html(content);
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-month").html(second_content);
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-title").html(third_content);
+        list_title.eq(first_index).find("a").removeClass("MainNewsListInfo-list-item-click-on")
+        list_title.eq(first_index).find("a").addClass("MainNewsListInfo-list-item-click-off")
+        list_title.eq(second_index).find("a").removeClass("MainNewsListInfo-list-item-click-off")
+        list_title.eq(second_index).find("a").addClass("MainNewsListInfo-list-item-click-on")
+    }
+
+
+    list_title.eq(0).click(function(){
+        list_change(0, "16", "2023.10", "[채용공고]2024년도 코엑스 신입 및 경력사원 채용", 1, 0)
+        list_change(1, "04", "2023.10", "2024년도 코엑스 전시장 서비스협력업체 등록 공고")
+        list_change(2, "09", "2023.08", "Coex Jamboree Lounge(코엑스 잼버리 문화체험 프로그램 및 라운지 운영)")
+        list_change(3, "08", "2023.05", "코엑스 전시장 현장관리 담당자 (홀매니저) 채용 공고")
+        
+    })
+
+    list_title.eq(1).click(function(){
+        list_change(0, "21", "2024.02", "코엑스 회의실 집기세팅 운영용역 업체 선정", 0, 1)
+        list_change(1, "20", "2024.02", "무역센터 아셈타워 메일센터 운영 용역")
+        list_change(2, "15", "2024.02", "2024년 무역센터 공조기용 인버터 교체공사")
+        list_change(3, "15", "2024.02", "무역센터 아셈타워 스프링클러배관 교체 추가공사(6차)")
+    })
+
+    // Topbutton =====================================
+    const TopButton = $(".TopButton");
+    TopButton.click(function(){
+        window.scrollTo({top : 0, behavior: 'smooth'}); 
+    })
 })
