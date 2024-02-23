@@ -1,0 +1,190 @@
+.site-content{
+    padding-top: 70px;
+}
+
+.site-content{
+    width:80%;
+    margin: auto;
+}
+
+/* Breadcrumb ================================*/
+.BreadcrumbList{
+    display:flex;
+    margin-bottom:72px;
+}
+
+.BreadcrumbList-item{
+    position: relative;
+    margin-right:17px;
+    padding-right: 17px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.BreadcrumbList-item:nth-child(-n+2)::after{
+    position: absolute;
+    top:50%;
+    right:0px;
+    transform: translateY(-50%);
+    width:6px;
+    height: 7px;
+    background-size: 6px 7px;
+    background-image: url(../img/ico_breadcrumb_arrow.svg);
+    content: "";
+}
+
+/* PageTitle ======================================*/
+.PageTitle{
+    margin-bottom:56px;
+    font-size: 63px;
+    letter-spacing:-5px
+}
+
+/* MapPage =======================================*/
+.MapPage{
+    display:flex;
+}
+
+.MapPageList{
+    width:25%;
+}
+
+.MapPageList-title{
+    margin-bottom:30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.MapMeansList{
+    display: flex;
+    margin:0px 0px 40px 0px;
+}
+
+.MapMeansList li{
+    position: relative;
+    width:25%;
+    text-align: center;
+}
+
+.MapMeansList li a{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 63px;
+    font-size: 14px;
+}
+
+.MapMeansList-item-tran-link-iscurrent{
+    color:#F246AC;
+}
+
+.MapMeansList-item-tran .MapMeans-icon{
+    position: absolute;
+    top:0px;
+    left:50%;
+    transform: translateX(-50%);
+    width:29px;
+    height: 39px;
+    background-size: 29px 39px;
+    background-image: url(../img/ico_train.svg);
+    content: "";   
+}
+
+
+.MapMeansList-item-bus .MapMeans-icon{
+    position: absolute;
+    top:0px;
+    left:50%;
+    transform: translateX(-50%);
+    width:38px;
+    height: 40px;
+    background-size: 38px 40px;
+    background-image: url(../img/ico_bus.svg);
+    content: ""; 
+}
+
+
+.MapMeansList-item-car .MapMeans-icon{
+    position: absolute;
+    top:0px;
+    left:50%;
+    transform: translateX(-50%);
+    width:38px;
+    height: 40px;
+    background-size: 38px 40px;
+    background-image: url(../img/ico_car.svg);
+    content: ""; 
+}
+
+.MapMeansList-item-bicycle .MapMeans-icon{
+    position: absolute;
+    top:0px;
+    left:50%;
+    transform: translateX(-50%);
+    width:30px;
+    height: 37px;
+    background-size: 30px 37px;
+    background-image: url(../img/ico_bicycle.svg);
+    content: ""; 
+}
+
+/* SubCnt ==============================*/
+.MapPageListSubCnt-item{
+    display:none;
+}
+
+.MapPageListSubCnt-title{
+    margin-bottom:12px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.MapPageList-item{
+    position: relative;
+    width:75%;
+    padding:12px 48px 12px 16px;
+    background-color: #fff;
+}
+
+.MapPageList-item a{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4em;
+    color:#000;
+}
+
+.MapPageList-item.is-current{
+    position: relative;
+    width:75%;
+    padding:12px 48px 12px 16px;
+    background-color: #000;
+}
+
+.MapPageList-item.is-current a{
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4em;
+    color:#fff;
+}
+
+
+.MapPageList-item a::after{
+    position: absolute;
+    top:50%;
+    right: 5%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 16px;
+    background-size: 17px 16px;
+    background-image: url(../img/ico_maplist_arrow.svg);
+    content: "";
+}
+
+
+.MapImg{
+    width:75%;
+}
+
+.MapImg img{
+    width:100%;
+}

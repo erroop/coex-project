@@ -70,26 +70,25 @@ $(function(){
     const HeroSlide_thumb = $(".HeroSlide-thumb");
     const HeroSlide_thumb_wrap = $(".HeroSlide-thumb-wrap");
     let index = 1;
+    const HeroSlide_indicator = (first_index, second_index, third_index) =>{
+        HeroSlide_thumb_indicator.find("span").eq(first_index).addClass("focus")
+        HeroSlide_thumb_indicator.find("span").eq(second_index).removeClass("focus")
+        HeroSlide_thumb_indicator.find("span").eq(third_index).removeClass("focus")
+    }
     const slidethumb = () => {
         if(index === 0){
             HeroSlide_thumb_wrap.css({transform : "translateX(" + -(HeroSlide_thumb.width() * 0) + "px)"})
-            HeroSlide_thumb_indicator.find("span").eq(0).addClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(1).removeClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(2).removeClass("focus")
+            HeroSlide_indicator(0, 1, 2)
             index ++;
         }
         else if(index === 1){
             HeroSlide_thumb_wrap.css({transform : "translateX(" + -(HeroSlide_thumb.width() * 1) + "px)"})
-            HeroSlide_thumb_indicator.find("span").eq(0).removeClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(1).addClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(2).removeClass("focus")
+            HeroSlide_indicator(1, 0, 2)
             index ++;
         }
         else if(index === 2){
             HeroSlide_thumb_wrap.css({transform : "translateX(" + -(HeroSlide_thumb.width() * 2) + "px)"})
-            HeroSlide_thumb_indicator.find("span").eq(0).removeClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(1).removeClass("focus")
-            HeroSlide_thumb_indicator.find("span").eq(2).addClass("focus")
+            HeroSlide_indicator(2, 0, 1)
             index = 0;
         }
     }
@@ -118,112 +117,72 @@ $(function(){
     const MainTicket_inner_slide_btn_left = $(".MainTicket-inner-slide-btn-left");
     const MainTicket_inner_slide_btn_right = $(".MainTicket-inner-slide-btn-right");
     let MainTicket_count = 0;
+    const MainTicket_indicator = (first_index, second_index, third_index, four_index, fivem_index, six_index) => {
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(first_index).addClass("focus");
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(second_index).removeClass("focus");
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(third_index).removeClass("focus");
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(four_index).removeClass("focus");
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(fivem_index).removeClass("focus");
+        MainTicket_inner_slide_wrap_indicator.find("span").eq(six_index).removeClass("focus");
+    };
+
     const MainTicket_indicator_right = () => {
         if(MainTicket_count === 0){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*1) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(1, 0, 2, 3, 4, 5)
             MainTicket_count++;
         }
         else if(MainTicket_count === 1){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*2) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(2, 0, 1, 3, 4, 5)
             MainTicket_count++;
         }
         else if(MainTicket_count === 2){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*3) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(3, 0, 1, 2, 4, 5)
             MainTicket_count++;
         }
         else if(MainTicket_count === 3){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*4) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(4, 0, 1, 2, 3, 5)
             MainTicket_count++;
         }
         else if(MainTicket_count === 4){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*5) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).addClass("focus");
+            MainTicket_indicator(5, 0, 1, 2, 3, 4)
             MainTicket_count++;
         }
-    }
-    MainTicket_inner_slide_btn_right.click(MainTicket_indicator_right)
+    };
+    MainTicket_inner_slide_btn_right.click(MainTicket_indicator_right);
+
     const MainTicket_indicator_left = () =>{
         if(MainTicket_count === 5){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*4) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(4, 0, 1, 2, 3, 5)
             MainTicket_count--;
         }
         else if(MainTicket_count === 4){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*3) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(3, 0, 1, 2, 4, 5)
             MainTicket_count--;
         }
         else if(MainTicket_count === 3){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*2) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(2, 0, 1, 3, 4, 5)
             MainTicket_count--;
         }
         else if(MainTicket_count === 2){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*1) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(1, 0, 2, 3, 4, 5)
             MainTicket_count--;
         }
         else if(MainTicket_count === 1){
             MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*0) + "px)"});
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(0).addClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-            MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+            MainTicket_indicator(0, 1, 2, 3, 4, 5)
             MainTicket_count--;
         }
-    }
-    MainTicket_inner_slide_btn_left.click(MainTicket_indicator_left)
+    };
+    MainTicket_inner_slide_btn_left.click(MainTicket_indicator_left);
 
     //MainTicket-inner-slide-btn indicator
     const MainTicket_inner_slide_wrap_indicator = $(".MainTicket-inner-slide-wrap-indicator")
@@ -231,67 +190,43 @@ $(function(){
     MainTicket_inner_slide_wrap.find(".MainTicketItem").each(function(){
         MainTicket_indicator_html += "<span></span>"
         MainTicket_inner_slide_wrap_indicator.html(MainTicket_indicator_html);
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(0).addClass("focus");
 
     MainTicket_inner_slide_wrap_indicator.find("span").eq(0).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*0) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).addClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+        MainTicket_indicator(0, 1, 2, 3, 4, 5)
         MainTicket_count = 0;
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(1).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*1) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).addClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+        MainTicket_indicator(1, 0, 2, 3, 4, 5)
         MainTicket_count = 1;
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(2).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*2) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).addClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+        MainTicket_indicator(2, 0, 1, 3, 4, 5)
         MainTicket_count = 2;
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(3).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*3) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).addClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+        MainTicket_indicator(3, 0, 1, 2, 4, 5)
         MainTicket_count = 3;
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(4).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*4) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).addClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).removeClass("focus");
+        MainTicket_indicator(4, 0, 1, 2, 3, 5)
         MainTicket_count = 4;
-    })
+    });
+
     MainTicket_inner_slide_wrap_indicator.find("span").eq(5).click(function(){
         MainTicket_inner_slide_wrap.css({transform : "translateX(" +-(MainTicket_inner_slide.width()*5) + "px)"});
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(0).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(1).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(2).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(3).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(4).removeClass("focus");
-        MainTicket_inner_slide_wrap_indicator.find("span").eq(5).addClass("focus");
+        MainTicket_indicator(5, 0, 1, 2, 3, 4)
         MainTicket_count = 5;
     })
 
@@ -329,4 +264,5 @@ $(function(){
     TopButton.click(function(){
         window.scrollTo({top : 0, behavior: 'smooth'}); 
     })
+
 })
