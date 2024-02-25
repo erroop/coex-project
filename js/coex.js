@@ -9,6 +9,21 @@ $(function(){
         menu_item_102_sub_menu.css({display:"none"})
     })
 
+    // tablet, mobile menu click
+    const ResponseNav = $(".ResponseNav");
+    const Mene_Wrap = $(".menu-wrap");
+    let ResponseNav_count = 0;
+    ResponseNav.click(function(){
+        if(ResponseNav_count === 0){
+            Mene_Wrap.css({display : 'block'})
+            ResponseNav_count ++;
+        }
+        else if(ResponseNav_count === 1){
+            Mene_Wrap.css({display : 'none'})
+            ResponseNav_count --;
+        }
+    })
+
     // HeaderSearchBar click ===============================================
     const HeaderSearch = $(".HeaderSearch-link");
     const HeaderSearchBar = $(".HeaderSearchBar");
@@ -234,9 +249,9 @@ $(function(){
     const list_title = $(".MainNewsListInfo-list .MainNewsListInfo-list-item");
     const MainnewsList = $(".MainNewesList-list");
     const list_change = (index, content, second_content, third_content , first_index, second_index) => {
-        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-day").html(content);
-        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-month").html(second_content);
-        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-title").html(third_content);
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-day").text(content);
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-date-month").text(second_content);
+        MainnewsList.find(".MainNewsList-list-item").eq(index).find(".MainNewsList-list-item-title").text(third_content);
         list_title.eq(first_index).find("a").removeClass("MainNewsListInfo-list-item-click-on")
         list_title.eq(first_index).find("a").addClass("MainNewsListInfo-list-item-click-off")
         list_title.eq(second_index).find("a").removeClass("MainNewsListInfo-list-item-click-off")

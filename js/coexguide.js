@@ -5,6 +5,21 @@ $(function(){
           window.scrollTo({top : 0, behavior: 'smooth'}); 
       })
 
+    // tablet, mobile menu click
+    const ResponseNav = $(".ResponseNav");
+    const Mene_Wrap = $(".menu-wrap");
+    let ResponseNav_count = 0;
+    ResponseNav.click(function(){
+        if(ResponseNav_count === 0){
+            Mene_Wrap.css({display : 'block'})
+            ResponseNav_count ++;
+        }
+        else if(ResponseNav_count === 1){
+            Mene_Wrap.css({display : 'none'})
+            ResponseNav_count --;
+        }
+    })
+
     // MapList traffic click ====================================
     const MapPageList = $(".MapMeansList li");
     const SubCntList = $(".SubCnt .MapPageListSubCnt-item")

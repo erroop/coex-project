@@ -188,3 +188,69 @@
 .MapImg img{
     width:100%;
 }
+
+@media screen and (min-width : 1024px) and (max-width : 1440px) {
+    .site-content{
+        width:100%;
+    }
+
+    .BreadcrumbList-item{
+        font-size: 13px;
+    }
+
+    .PageTitle{
+        font-size: 50px;
+        letter-spacing:normal;
+    }
+
+    .MapPage{
+        justify-content: space-between;
+    }
+
+    .MapPageList{
+        width: 20%;
+    }
+}
+
+@media screen and (min-width : 748px) and (max-width : 1024px){
+    .site-content{
+        width:100%;
+    }
+
+    .BreadcrumbList-item{
+        font-size: 13px;
+    }
+
+    .PageTitle{
+        font-size: 50px;
+        letter-spacing:normal;
+    }
+
+    .MapPage{
+        justify-content: space-between;
+    }
+
+    .MapPageList{
+        width: 20%;
+    }
+
+    .MapImg{
+        justify-content: end;
+    }
+
+    .MapPageList-item.is-current{
+        padding:12px 30px 12px 16px;
+    }
+
+    .MapPageList-list li{
+        padding: 12px 30px 12px 16px;
+    }
+
+    .MapPageList-item.is-current a{
+        font-size: 13px;
+    }
+
+    .MapPageList-list li a{
+        font-size: 13px;
+    }
+}
