@@ -654,6 +654,7 @@ main{
     font-weight: 500;
 }
 
+
 /* MainEvebtSlideItem-img ===================================*/
 .MainEventSlideItem-img{
     position: absolute;
@@ -667,6 +668,11 @@ main{
     width:100%;
     height: 429px;
 }
+
+/* MainEvnetSlideMobileIndicator ==============================*/
+.MainEvnetSlideMobileIndicator{
+    display: none;
+   }
 
 /* MainTicket ================================================*/
 .MainTicket{
@@ -1515,7 +1521,11 @@ footer{
     font-size: 18px;
 }
 
+/* 대형 태블릿 디바이스 */
 @media screen and (min-width : 1024px) and (max-width : 1440px){
+    .menu-wrap{
+        display: inline-flex;
+    }
 
     .menu-wrap li {
         padding:18px 15px;
@@ -1702,6 +1712,10 @@ footer{
         width: 100%;
         height: 320px;
     }
+
+    .MainEvnetSlideMobileIndicator{
+        display: none;
+       }
 
     .MainTicket-inner-title{
         margin-bottom:130px;
@@ -1999,6 +2013,7 @@ footer{
     }
 }
 
+/* 소형 태블릿 디바이스 */
 @media screen and (min-width : 748px) and (max-width : 1024px){
     .HeaderInfo{
         position: relative;
@@ -2009,7 +2024,6 @@ footer{
         left:50%;
         transform: translate(-50%, -50%);
     }
-
 
    .menu-wrap{
     position: absolute;
@@ -2031,15 +2045,17 @@ footer{
    }
 
    .menu-item-102-sub-menu{
-    display:flex;
-    left:0px;
-    bottom:1px;
+    position: static;
+    display:block;
+    justify-content: flex-start;
+    margin:20px 0px 0px 0px;
     color:#fff;
     border-bottom: none;
    }
 
    .menu-item-102-sub-menu li{
-    padding:23px 12px;
+    margin: 0px;
+    padding:18px 0px;
     border-bottom: none;
    }
 
@@ -2048,6 +2064,7 @@ footer{
    }
 
    .menu-item-102-sub-menu li a{
+    font-size: 15px;
     color: #fff;
    }
 
@@ -2065,6 +2082,10 @@ footer{
 
    .HeaderSearch{
     margin-right:20px;
+   }
+
+   .HeaderSearchBar{
+    background-color: #000;
    }
 
    .lang-wrap li{
@@ -2254,6 +2275,10 @@ footer{
    .MainEventSlideItem-img img{
     width:100%;
     height: 224px;
+   }
+
+   .MainEvnetSlideMobileIndicator{
+    display: none;
    }
 
    .MainTicket-inner-title{
@@ -2449,6 +2474,751 @@ footer{
     font-size: 15px;
    }
 
+}
+
+/* 스마트폰 디바이스 */
+@media screen and (max-width : 748px){
+    .HeaderInfo{
+        position: relative;
+        max-width:95%;
+    }
+
+    .Logo{
+        left:50%;
+        transform: translate(-50%, -50%);
+        
+    }
+
+   .menu-wrap{
+    position: absolute;
+    display:none;
+    top:30px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: black;
+    z-index: 99999;
+   }
+
+   .menu-wrap li{
+    margin:0px 20px;
+    border-bottom: 1px dashed #707070;
+   }
+
+   .menu-item-102{
+    position: relative;
+   }
+
+   .menu-item-102-sub-menu{
+    position: static;
+    display:block;
+    justify-content: flex-start;
+    margin:20px 0px 0px 0px;
+    color:#fff;
+    border-bottom: none;
+   }
+
+   .menu-item-102-sub-menu li{
+    margin: 0px;
+    padding:18px 0px;
+    border-bottom: none;
+   }
+
+   .menu-item-102-sub-menu li a:hover{
+   text-decoration: none;
+   }
+
+   .menu-item-102-sub-menu li a{
+    font-size: 13px;
+    color: #fff;
+   }
+
+   .ResponseNav{
+    position: absolute;
+    top:50%;
+    left:0px;
+    transform: translateY(-50%);
+    display:block;
+    font-size: 25px;
+    border: none;
+    color:#fff;
+    background-color: transparent;
+   }
+
+   .HeaderSearch{
+    right:0%;
+    margin-right:0px;
+   }
+
+   .HeaderSearchBar{
+    background-color: black;
+   }
+
+   .SiteLang{
+    display:none;
+   }
+
+   .HeaderSearch-link a{
+    width:26px;
+    height: 25px;
+    background-size: 26px 25px;
+   }
+
+   .Hero{
+    height: auto;
+   }
+
+   .HeroSlide{
+    position: relative;
+    display: block;
+    z-index: -1;
+   }
+
+   .HeroSlide-text{
+    position: relative;
+    width:100%;
+    margin-bottom:20px;
+    z-index: -1;
+   }
+ 
+   .HeroSlide-subtext{
+    font-size: 18px;
+   }
+
+   .HeroSlideTitleText{
+    min-height: 110px;
+    font-size: 37px;
+    line-height: normal;
+   }
+
+   .HeroSlideTextInfo div{
+    font-size: 17px;
+    line-height: normal;
+   }
+
+   .HeroSlideTextInfo{
+    position: static;
+   }
+
+   .HeroSlideArrow{
+    display:none;
+   }
+
+   .HeroSlide-thumb{
+    width:100%;
+   }
+
+   .HeroSlide-thumb-wrap img{
+    width:100%;
+   }
+
+   .HeroSlide-thumb-category{
+    display:none;
+   }
+
+   .HeroSlide-thumb-indicator{
+    right:auto;
+    left:50%;
+    transform: translateX(-50%);
+   }
+
+   .HeroSlide-thumb-indicator span{
+    width:9px;
+    height: 9px;
+   }
+
+   .site-container{
+    flex-direction: column;
+   }
+
+   .MainGuideFlex{
+    margin-top:0px;
+    margin-bottom: 80px;
+   }
+
+   .MainGuideTitle{
+    padding:24px 20px;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+   }
+   .MainGuideInfo-cate-title-text{
+    margin-bottom:11px;
+    font-size: 12px;
+    line-height: normal;
+   }
+
+   .MainGuideInfo-title-text{
+    font-size: 19px;
+   }
+
+   .MainGuideInfo::before{
+    bottom:11%;
+    right:5%;
+    width:99px;
+    height: 71px;
+    background-size: 99px 71px;
+   }
+
+   .MdGuide{
+    flex-direction: column;
+    padding: 24px 20px;
+    width:100%;
+    box-sizing: border-box;
+   }
+
+   .MdGuideTitle{
+    margin-bottom:0px;
+    padding:0px;
+    width:100%;
+   }
+
+   .MdGuideInfo-cate-title-text{
+    font-size: 12px;
+    line-height: normal;
+   }
+
+   .MdGuideInfo-title-text h3{
+    font-size: 19px;
+    font-weight: 500;
+    line-height: normal;
+   }
+
+   .MdGuideList{
+    margin-top:30px;
+    width:100%;
+    height: auto;
+   }
+
+   .MdGuideList-list li {
+    width:30%;
+   }
+
+   .MdGuideList-title{
+    padding-bottom: 6px;
+    font-size: 12px;
+   }
+
+   .MdGuideList-item-ico-Parking::before{
+    bottom: 0px;
+    width:19px;
+    height: 30px;
+    background-size: 19px 30px;
+   }
+   
+   .MdGuideList-item-ico-Directions::before{
+    bottom: 0px;
+    width:20px;
+    height: 37px;
+    background-size: 20px 37px;
+   }
+
+   .MdGuideList-item-ico-Amenities::before{
+    bottom: 4px;
+    width: 27px;
+    height: 24px;
+    background-size: 27px 24px;
+   }
+
+   .MainEventSlide{
+    position: relative;
+    min-height: auto;
+    margin-bottom: 100px;
+   }
+
+   .MainEventSlideTitle{
+    display: inline-flex;
+    flex-direction: column;
+    width:100%;
+    height: auto;
+    float: none;
+   }
+
+   .MainEventSlideTitle-text{
+    font-size: 30px;
+   }
+
+   .MainEventSlideTitle-count{
+    position: static;
+    margin-left:10px;
+    font-size: 17px;
+   }
+
+   .MainEventSlideTitleInfo{
+    position: static;
+    display: inline-flex;
+    margin: 30px 0px;
+    padding: 0px;
+   }
+
+   .MainEventSlideTitleInfo-click{
+    position: relative;
+    font-size: 12px;
+    padding:0px 19px 0px 25px;
+   }
+
+   .MainEventSlideTitleInfo-click::before{
+    left:0px;
+    bottom:0px;
+    width: 20px;
+    height: 14px;
+    background-size: 20px 14px;
+   }
+
+   .MainEventSlideTitleInfo-click::after{
+    right:0px;
+   }
+
+   .MainEventSlideWrap{
+    display: flex;
+    transition: all 1s;
+   }
+
+   .MainEventSlideItem{
+    display:flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    float: none;
+    width:100%;
+    height: auto;
+   }
+
+   .MainEventSlideItem-img{
+    position: static;
+    opacity: 1;
+    border-left: 1px solid black;
+   }
+
+   .MainEventSlideItem-img img{
+    width:100%;
+    height: 100%;
+   }
+
+   .MainEventSlideItem-inner{
+    justify-content: flex-start;
+    padding:17px 27px 34px 27px;
+    border-left: 1px solid black;
+   }
+
+   .MainEventSlideItem-inner::before{
+    height: 1px;
+   }
+
+   .MainEventSlideItem-inner::after{
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 1px;
+    background-color: #000;
+    content: "";
+   }
+
+   .MainEventSlideItem-inner-cate-purple{
+    margin-bottom: 5px;
+    font-size: 12px;
+   }
+
+   .MainEventSlideItem-inner-cate-pink{
+    margin-bottom: 5px;
+    font-size: 12px;
+   }
+
+   .MainEventSlideItem-inner-title{
+    margin:0px;
+    height: 48px;
+    font-size: 17px;
+   }
+
+   .MainEventSlideItem-inner-date{
+    font-size: 12px;
+   }
+
+   .MainEvnetSlideMobileIndicator{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom:-8%;
+    left:50%;
+    width:100%;
+    transform: translateX(-50%);
+   }
+
+   .MainEvnetSlideMobileIndicator span{
+    display: inline-block;
+    margin:0px 5px;
+    width:10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: #e8e8e8;
+    cursor: pointer;
+   }
+
+   .MainEvnetSlideMobileIndicator .focus{
+    background-color: #000;
+   }
+
+   .MainTicket{
+    min-height: 830px;
+   }
+
+   .MainTiceket-img-container img{
+    min-height: 830px;
+   }
+
+   .MainTicket-inner-title{
+    margin-bottom:0px;
+   }
+
+   .MainTicket-inner-title-text{
+    font-size: 30px;
+   }
+
+   .MainTicket-inner-title-count{
+    position: static;
+    margin-left:15px;
+    font-size: 17px;
+   }
+
+   .MainTicket-inner-slide{
+    margin:0px;
+    padding: 40px 0px;
+    width:100%;
+    height: auto;
+   }
+
+   .MainTicket-inner-slide{
+    width:70%;
+    margin: auto;
+   }
+
+   .MainTicket-inner-slide-btn-left{
+    right:50px;
+    width:38px;
+    height: 24px;
+    background-size: 38px 24px;
+   }
+
+   .MainTicket-inner-slide-btn-right{
+    width:38px;
+    height: 24px;
+    background-size: 38px 24px;
+   }
+
+   .MainTicketItem{
+    padding:0px 19px;
+    overflow: hidden;
+   }
+
+   .MainTicketItemInner{
+    flex-direction: column;
+    padding:32px 13px;
+    height: auto;
+   }
+
+   .MainTicketItemLeft{
+    width:19px;
+   }
+   .MainTicketItemRight{
+    width:19px;
+   }
+
+   .MainTicketItemLeft-bg{
+    width:19px;
+    height:94.5%;
+   }
+
+   .MainTicketItemLeft-bg::before{
+    top:-17px;
+    width:19px;
+    height: 19px;
+    background-size: 19px;
+   }
+   .MainTicketItemLeft-bg::after{
+    bottom:-17px;
+    width:19px;
+    height: 19px;
+    background-size: 19px;
+   }
+
+   .MainTicketItemRight-bg{
+    width:19px;
+    height:94.5%;
+   }
+
+   .MainTicketItemRight-bg::before{
+    top:-17px;
+    left:1px;
+    width:19px;
+    height: 19px;
+    background-size: 19px;
+   }
+   .MainTicketItemRight-bg::after{
+    bottom:-17px;
+    width:19px;
+    height: 19px;
+    background-size: 19px;
+   }
+
+   .MainTicketItemInner-img-container{
+    width: 100%;
+   }
+
+   .MainTicketItemInner-img-container img{
+    width:100%;
+   }
+
+   .MainTicketItemInner-title{
+    width:100%;
+    min-height: 280px;
+    margin-top:20px;
+    padding:0px;
+   }
+
+   .MainTicketItemInner-title-text{
+    font-size: 18px;
+    height: auto;
+   }
+
+   .MainTicketItemInner-info-list{
+    flex-wrap: wrap;
+   }
+
+   .MainTicketItemInner-info-item{
+    float: left;
+    margin-bottom:10px;
+    width:50%;
+   }
+
+   .MainTicketItemInner-info-item-title{
+    margin-bottom:5px;
+    font-size: 11px;
+   }
+
+   .MainTicketItemInner-info-item-Dday{
+    font-size: 13px;
+   }
+
+   .MainTicketItemInner-info-item-date{
+    font-size: 13px;
+   }
+
+   .MainTicketItemInner-info-item-locate{
+    font-size: 11.5px;
+   }
+
+   .MainTicketItemInner-info-btn-list-item{
+    padding:12px;
+   }
+
+   .MainTicketItemInner-info-btn-list-item a{
+    font-size: 12px;
+   }
+
+   .MainTicketItemInner-info-btn{
+    left:0px;
+    bottom:10%;
+   }
+
+   .MainTicketItemInner-info-bg-img{
+    right:0px;
+    bottom:0%;
+    width:90px;
+    height: 15px;
+   }
+
+   .MainTicket-inner-slide-wrap-indicator{
+    display:flex;
+    justify-content: center;
+    width:100%;
+   }
+
+   .MainNews{
+    padding:80px 0px;
+   }
+
+   .MainNewsTitle{
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+    width:100%;
+    float: none;
+   }
+
+   .MainNewsTitle-title{
+    font-size: 30px;
+   }
+
+   .MainNewsTitle-info{
+    margin:20px 0px 0px 20px;
+   }
+
+   .MainNewsTitle-info a{
+    font-size: 13px;
+   }
+
+   .MainNewsListInfo{
+    padding-bottom:20px;
+   }
+
+   .MainNewsListInfo-list-item a{
+    font-size: 13px;
+   }
+
+   .MainNewsList-list-item-date-day{
+    font-size: 26px;
+   }
+
+   .MainNewsList-list-item-date-month{
+    font-size: 13px;
+   }
+
+   .MainNewsList-list-item-title{
+    padding-left:20px;
+    font-size: 14px;
+   }
+
+   .MainMediaText{
+    padding:50px 0px;
+    width: 100%;
+    height: auto;
+   }
+
+   .MainMediaText-title{
+    font-size: 40px;
+    height: 30%;
+   }
+
+   .MainMeduaMetaList{
+    margin-top:30px;
+   }
+
+   .MainMeduaMetaList-list-item{
+    margin-bottom:30px;
+   }
+
+   .MainMeduaMetaList-list-item a{
+    font-size: 13px;
+   }
+
+   .MainMediaMetaSub{
+    margin-top:30px;
+   }
+
+   .MainMediaMetaSub-text{
+    font-size: 30px;
+   }
+
+   .MainMediaList{
+    display:none;
+   }
+
+
+   .MainMeiaBackgroundImg img{
+    min-height: 480px;
+   }
+   
+   .TopButton{
+    top:-8%;
+   }
+
+   footer{
+    margin-top:80px;
+   }
+
+   .FooterFlex{
+    flex-wrap: wrap;
+   }
+
+   .FooterInfo{
+    width:100%;
+    height: auto;
+    border: none;
+   }
+
+   .FooterInfoAddress li{
+    font-size: 15px;
+   }
+
+   .FooterInfoTel{
+    margin-top:20px;
+    padding:12px 20px;
+   }
+
+   .FooterInfoTel a{
+    font-size: 13px;
+   }
+
+   .FooterInfo::after{
+    display:none;
+   }
+
+   .FooterNav{
+    width:100%;
+   }
+
+   .FooterNav-list-item{
+    height: 150px;
+   }
+
+   .FooterNav-list-item a{
+    font-size: 15px;
+   }
+
+   .FooterNav-list-item:nth-child(2n){
+    border: none;
+   }
+
+   .FooterLink{
+    width:50%;
+    height: 200px;
+    padding:22px 12px 13px 12px;
+    box-sizing: border-box;
+   }
+
+   .FooterLink::before{
+    display:none;
+   }
+
+   .FooterLink::after{
+    display:none;
+   }
+
+   .FooterInfoList-item{
+    font-size: 13px;
+   }
+
+   .FooterSns{
+    display:none;
+   }
+
+   .FooterMenu{
+    width:50%;
+    height: 200px;
+    padding:22px 12px 13px 12px;
+    box-sizing: border-box;
+    border: none;
+   }
+
+   .FooterMenu::before{
+    display:none;
+   }
+
+   .FooterMenu::after{
+    display:none;
+   }
+
+   .FooterMenuList-item a{
+    font-size: 13px;
+   }
+
+   .FooterMenuLink{
+    display:none;
+   }
+
+   .FooterCopy{
+    font-size: 12px;
+   }
 }
 
 

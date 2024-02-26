@@ -214,7 +214,9 @@
 
 @media screen and (min-width : 748px) and (max-width : 1024px){
     .site-content{
+        position: relative;
         width:100%;
+        z-index: -1;
     }
 
     .BreadcrumbList-item{
@@ -252,5 +254,42 @@
 
     .MapPageList-list li a{
         font-size: 13px;
+    }
+}
+
+@media screen and (max-width : 748px){
+    .site-content{
+        position: relative;
+        padding-top:50px;
+        width:100%;
+        z-index: -1;
+    }
+
+    .BreadcrumbList{
+        margin-bottom:50px;
+    }
+
+    .BreadcrumbList-item{
+        font-size: 13px;
+        padding-right:14px;
+        margin-right: 14px;
+    }
+
+    .PageTitle{
+        font-size: 41px;
+        letter-spacing: normal;
+    }
+
+    .MapPage{
+        flex-direction: column;
+    }
+
+    .MapPageList{
+        width:100%;
+    }
+
+    .MapImg{
+        margin-top:40px;
+        width: 100%;
     }
 }

@@ -1,17 +1,77 @@
 $(function(){
+    if($(window).width() > 1025){
     // guide mouseover =====================================
-    const menu_item_102 = $(".menu-item-102 a");
-    const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
-    menu_item_102.mouseover(function(){
-        menu_item_102_sub_menu.css({display:"flex"})
-    })
-    menu_item_102_sub_menu.mouseleave(function(){
-        menu_item_102_sub_menu.css({display:"none"})
-    })
+        const menu_item_102 = $(".menu-item-102 a");
+        const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
+        menu_item_102.mouseover(function(){
+            menu_item_102_sub_menu.css({display:"flex"})
+        })
+        menu_item_102_sub_menu.mouseleave(function(){
+            menu_item_102_sub_menu.css({display:"none"})
+        })
+    // MainEventSlideItem MouseOver ==========================
+        const MainEventSlideItem = $(".MainEventSlideItem");
+        MainEventSlideItem.mouseover(function(){
+            $(this).children(".MainEventSlideItem-img").css({opacity : 1})
+        }).mouseleave(function(){
+            $(this).children(".MainEventSlideItem-img").css({opacity : 0})
+        })
+    }
+    if($(window).width() < 1024){
+        // guide mouseover =====================================
+            const menu_item_102 = $(".menu-item-102 a");
+            const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
+            let menu_item_102_count = 0;
+            menu_item_102.click(function(){
+                if(menu_item_102_count === 0){
+                    menu_item_102_sub_menu.css({display:"block"});
+                    menu_item_102_count ++;
+                    console.log("lala")
+                }
+                else if(menu_item_102_count === 1){
+                    menu_item_102_sub_menu.css({display:"none"});
+                    menu_item_102_count --;
+                }
+            })
+        }
+    if($(window).width() <= 748){
+        // MainEventSlideIndicator click ===============================
+        let MainEventSlideIndicator_html = ""
+        const MainEventSlideWrapItem = $(".MainEventSlideWrap .MainEventSlideItem")
+        const MainEventSlideIndicator = $(".MainEvnetSlideMobileIndicator");
 
-    // tablet, mobile menu click
+        MainEventSlideWrapItem.each(function(){
+            MainEventSlideIndicator_html += "<span></span>";
+            MainEventSlideIndicator.html(MainEventSlideIndicator_html);
+        })
+
+        const MainEventSlideIndicator_currnet = MainEventSlideIndicator.find("span")
+        MainEventSlideIndicator_currnet.eq(0).addClass("focus");
+
+        // Indicator slide click ------------------------------------------
+        const MainEventSlideWrap = $(".MainEventSlideWrap");
+        const MainEventSlideIndicator_slide = (first_index) => {
+            MainEventSlideIndicator_currnet.eq(first_index).click(function(){
+                MainEventSlideWrap.css({transform : "translateX(" + -(MainEventSlideWrap.width())*first_index + "px)"})
+                MainEventSlideIndicator_currnet.removeClass("focus")
+                $(this).addClass("focus")
+            })
+        }
+        MainEventSlideIndicator_slide(0);
+        MainEventSlideIndicator_slide(1);
+        MainEventSlideIndicator_slide(2);
+        MainEventSlideIndicator_slide(3);
+        MainEventSlideIndicator_slide(4);
+        MainEventSlideIndicator_slide(5);
+        MainEventSlideIndicator_slide(6);
+        MainEventSlideIndicator_slide(8);
+        MainEventSlideIndicator_slide(9);
+        MainEventSlideIndicator_slide(10);
+    }
+    // tablet, mobile menu click ======================================
     const ResponseNav = $(".ResponseNav");
     const Mene_Wrap = $(".menu-wrap");
+    const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
     let ResponseNav_count = 0;
     ResponseNav.click(function(){
         if(ResponseNav_count === 0){
@@ -20,6 +80,7 @@ $(function(){
         }
         else if(ResponseNav_count === 1){
             Mene_Wrap.css({display : 'none'})
+            menu_item_102_sub_menu.css({display:"none"});
             ResponseNav_count --;
         }
     })
@@ -117,14 +178,6 @@ $(function(){
         HeroSlide_thumb_indicator.html(innerText);
     })
     HeroSlide_thumb_indicator.find("span").eq(0).addClass("focus");
-
-    // MainEventSlideItem MouseOver ==========================
-    const MainEventSlideItem = $(".MainEventSlideItem");
-    MainEventSlideItem.mouseover(function(){
-        $(this).children(".MainEventSlideItem-img").css({opacity : 1})
-    }).mouseleave(function(){
-        $(this).children(".MainEventSlideItem-img").css({opacity : 0})
-    })
 
     //MainTicket-inner-slide-btn click
     const MainTicket_inner_slide = $(".MainTicket-inner-slide");

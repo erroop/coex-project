@@ -1,4 +1,33 @@
 $(function(){
+    if($(window).width() > 1025){
+        // guide mouseover =====================================
+            const menu_item_102 = $(".menu-item-102 a");
+            const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
+            menu_item_102.mouseover(function(){
+                menu_item_102_sub_menu.css({display:"flex"})
+            })
+            menu_item_102_sub_menu.mouseleave(function(){
+                menu_item_102_sub_menu.css({display:"none"})
+            })
+        }
+    if($(window).width() < 1024){
+        // guide mouseover =====================================
+            const menu_item_102 = $(".menu-item-102 a");
+            const menu_item_102_sub_menu = $(".menu-item-102-sub-menu")
+            let menu_item_102_count = 0;
+            menu_item_102.click(function(){
+                if(menu_item_102_count === 0){
+                    menu_item_102_sub_menu.css({display:"block"});
+                    menu_item_102_count ++;
+                    console.log("lala")
+                }
+                else if(menu_item_102_count === 1){
+                    menu_item_102_sub_menu.css({display:"none"});
+                    menu_item_102_count --;
+                }
+            })
+        }
+
       // Topbutton =====================================
       const TopButton = $(".TopButton");
       TopButton.click(function(){
@@ -8,6 +37,7 @@ $(function(){
     // tablet, mobile menu click
     const ResponseNav = $(".ResponseNav");
     const Mene_Wrap = $(".menu-wrap");
+    const menu_item_102_sub_menu = $(".menu-item-102-sub-menu");
     let ResponseNav_count = 0;
     ResponseNav.click(function(){
         if(ResponseNav_count === 0){
@@ -16,6 +46,7 @@ $(function(){
         }
         else if(ResponseNav_count === 1){
             Mene_Wrap.css({display : 'none'})
+            menu_item_102_sub_menu.css({display:"none"});
             ResponseNav_count --;
         }
     })
