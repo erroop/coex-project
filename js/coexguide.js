@@ -58,7 +58,7 @@ $(function(){
 
     // first moment ---------------------------------
     MapPageList.eq(0).find("a").css({color : "#F246AC"});
-    MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(../img/ico_train_a.svg)")
+    MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(./img/ico_train_a.svg)")
     SubCntList.eq(0).find(".MapPageList-item").eq(0).addClass("is-current");
     SubCntList.eq(0).css({display:"block"})
     
@@ -73,10 +73,10 @@ $(function(){
     // Train icon click ---------------------------------------
     MapPageList.eq(0).click(function(){
         // icon 컬러 변경
-        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(../img/ico_train_a.svg)")
-        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bus.svg)")
-        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(../img/ico_car.svg)")
-        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bicycle.svg)")
+        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(./img/ico_train_a.svg)")
+        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bus.svg)")
+        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(./img/ico_car.svg)")
+        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bicycle.svg)")
 
         // text 컬러 변경
         MapPageList.find("a").css({color:"black"})
@@ -114,10 +114,10 @@ $(function(){
     //Buss icon click -------------------------------------------
     MapPageList.eq(1).click(function(){
         // icon 컬러 변경
-        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(../img/ico_train.svg)")
-        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bus_a.svg)")
-        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(../img/ico_car.svg)")
-        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bicycle.svg)")
+        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(./img/ico_train.svg)")
+        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bus_a.svg)")
+        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(./img/ico_car.svg)")
+        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bicycle.svg)")
 
         // text 컬러 변경
         MapPageList.find("a").css({color:"black"})
@@ -162,10 +162,10 @@ $(function(){
     //car icon click -------------------------------------------
     MapPageList.eq(2).click(function(){
         // icon 컬러 변경
-        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(../img/ico_train.svg)")
-        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bus.svg)")
-        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(../img/ico_car_a.svg)")
-        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bicycle.svg)")
+        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(./img/ico_train.svg)")
+        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bus.svg)")
+        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(./img/ico_car_a.svg)")
+        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bicycle.svg)")
 
         // text 컬러 변경
         MapPageList.find("a").css({color:"black"})
@@ -218,10 +218,10 @@ $(function(){
     //bicycle icon click -------------------------------------------
     MapPageList.eq(3).click(function(){
         // icon 컬러 변경
-        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(../img/ico_train.svg)")
-        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bus.svg)")
-        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(../img/ico_car.svg)")
-        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(../img/ico_bicycle_a.svg)")
+        MapPageList.eq(0).find(".MapMeans-icon").css("background-image" , "url(./img/ico_train.svg)")
+        MapPageList.eq(1).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bus.svg)")
+        MapPageList.eq(2).find(".MapMeans-icon").css("background-image" , "url(./img/ico_car.svg)")
+        MapPageList.eq(3).find(".MapMeans-icon").css("background-image" , "url(./img/ico_bicycle_a.svg)")
 
         // text 컬러 변경
         MapPageList.find("a").css({color:"black"})
