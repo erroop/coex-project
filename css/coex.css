@@ -2693,9 +2693,10 @@ footer{
     width:30%;
    }
 
-   .MdGuideList-title{
+   .MdGuideList-title{ 
+    display: inline-flex;
+    font-size: 9px;
     padding-bottom: 6px;
-    font-size: 12px;
    }
 
    .MdGuideList-item-ico-Parking::before{
@@ -3076,6 +3077,7 @@ footer{
    .MainNewsList-list-item-title{
     padding-left:20px;
     font-size: 14px;
+    line-height: 20px;
    }
 
    .MainMediaText{

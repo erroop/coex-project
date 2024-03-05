@@ -36,6 +36,7 @@ $(function(){
         }
     if($(window).width() <= 748){
         // MainEventSlideIndicator click ===============================
+        $("html").css({overflowX : "hidden"})
         let MainEventSlideIndicator_html = ""
         const MainEventSlideWrapItem = $(".MainEventSlideWrap .MainEventSlideItem")
         const MainEventSlideIndicator = $(".MainEvnetSlideMobileIndicator");
