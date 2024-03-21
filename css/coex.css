@@ -1494,6 +1494,7 @@ footer{
     width:100%;
     text-align: start;
     border: none;
+    box-sizing: border-box;
     background-color: #f7f7f7;;
 }
 
